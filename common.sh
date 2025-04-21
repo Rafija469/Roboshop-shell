@@ -4,6 +4,7 @@ systemd(){
   systemctl start $(component_name)
 }
 nodejs(){
+  cp ${component_name}.service /etc/systemd/system/${component_name}.service
   dnf module disable nodejs -y
   dnf module enable nodejs:20 -y
   dnf install nodejs -y
