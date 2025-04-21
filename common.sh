@@ -22,7 +22,7 @@ nodejs(){
   dnf module enable nodejs:20 -y
   dnf install nodejs -y
   app_pre_setup
-
+   npm install
 }
 
 
